@@ -12,7 +12,7 @@ export default function TimerChallenge({ title, targetTime }) {
     setTimerStarted(true);
     timer.current = setTimeout(() => {
       setTimerExpired(true);
-      dialog.current.showModal(); // built-in method for the <dialog>
+      dialog.current.open(); // this is what is defined in ResultModal component
     }, targetTime * 1000);
   }
 
